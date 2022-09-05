@@ -2,7 +2,7 @@
 
 
 int main(void){
-  unsigned int counter;
+        int counter;
 	int grade;
 	int total;
 	int average;
@@ -11,7 +11,7 @@ int main(void){
 	counter = 0;
 
 	while(counter <= 10){
-		printf("%s", "Enter grade: ");
+		printf("%s", "Input Score: ");
 		scanf("%d", &grade);
 		total += grade;
 		counter++;
