@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+float lsegitiga(float alas, float tinggi);
+
+int main() {
+    float a, t;
+    
+    printf("alas: ");
+    scanf("%f", &a);
+    printf("\ntinggi: ");
+    scanf("%f", &t);
+    printf("hasil :%f", lsegitiga(a,t));
+}
+
+float lsegitiga(float alas, float tinggi){
+    return (alas * tinggi)/2;
+}
