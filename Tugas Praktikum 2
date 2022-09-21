@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <time.h>
+
+time_t t;                                               //Variabel untuk menyimpan waktu dari library time.h
+
+int HitungMundur(int i){
+      if(i == 1){
+           printf(" 1");
+      }else{
+           printf("%d ", i - 1);
+      }
+      
+}
+
+int main()
+{
+    srand((unsigned) time(&t));                         //Menggunakan variabel t untuk seed rand()
+
+    char lg;                                            //Variabel untuk menyimpan pilihan
+    printf("Login / Guest (l/g) "); scanf("%s", &lg);   //Meminta input dari pengguna untuk memilih menggunakan username atau guest username
+
+    char username[10];                                  //Variabel untuk menyimpan username yang diberikan pengguna (Maksimal 10 karakter)
+
+    switch(lg){
+        case 'l':                                       //Jika pengguna menginput 'l' atau 'L'
+        case 'L':
+            puts("Max 10 character");
+            printf("Username : "); scanf("%s", username);   //Meminta pengguna menginput username yang ingin digunakan
+            printf("\nHello %s", username);                 //Output username pengguna
+            break;
+        case 'g':
+        case 'G':
+            printf("Hello User%d", Random(1000, 9999));     //Output guest user dengan menambahkan angka random antara 1000 dan 9999
+            break;
+        default:
+            printf("default");                              //Bila input user tidak diketahui
+            break;
+    }
+
+   do{
+        puts("\n============Hitung Mundur============");
+
+        int i;                                          //Variabel untuk menyimpan angka
+        printf("Masukkan angka : "); 
+        scanf("%d", i);
+
+        HitungMundur(i);
+        
+    }while(getchar() != EOF);
+}
+
+
+int Random(int min, int max){                               //Fungsi untuk membatasi bilangan random
+    return min + (rand() % max);
+}
