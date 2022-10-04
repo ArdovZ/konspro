@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+void AlamatData(char* ptr){                 //programer function
+    printf("alamatnya ada di: %p\n", ptr);
+}
+
+int main(){
+    char x;         //tipe jenis data
+    char* x_ptr;    //pointer dengan jenis data char
+    printf("masukkan huruf!!\n ");  
+    scanf("%s", &x);    //mengscan char inputan user
+    AlamatData(x_ptr);  //mengeluarkan programer function
+}
