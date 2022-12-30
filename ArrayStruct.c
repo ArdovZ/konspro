@@ -99,7 +99,7 @@ void addData(){
     printf("Berapa total mahasiswa yang ingin didata : "); scanf("%u", &new);
     clear_screen();
     for(int i=total; i<total+new; i++){
-        printf("======Siswa ke-%d=======\n", (i+1));
+        printf("------Siswa ke-%d------\n", (i+1));
         printf("Nama\t: "); scanf(" %[^\n]", student[i].nama);
         printf("NIM\t: "); scanf("%s", student[i].nim);
         printf("Umur\t: "); scanf("%s", student[i].umur);
