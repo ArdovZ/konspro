@@ -87,11 +87,11 @@ int main() {
             exportTxt();
             break;
         default:
-            printf("Opsi tidak diketahui!!!");
+            printf("Unknown Option!!!");
             break;
         }
     }
-    printf("Terimakasih sudah menggunakan program saya :)");
+    printf("See you next time users :)");
 }
 
 void addData(){
@@ -114,7 +114,7 @@ void addData(){
 void exportTxt(){
     FILE *txtfile;
     static char dir[100];
-    printf("=================== EXPORT ======================\n");
+    printf("------------------------ EXPORT ------------------------\n");
     printf("Masukkan direktori file .txt yang anda inginkan\nContoh : D:\\konspro\\praktikum\\student.txt\nCatatan : secara default file .txt akan disimpan di lokasi yang sama dengan file .c ini\n"); scanf(" %[^\n]", dir);
     txtfile = fopen(dir, "w");
     if(txtfile!=NULL){
@@ -263,7 +263,7 @@ void editData(){
         Umur,
     };
     int which;
-    printf("================= EDIT BIO ====================\n");
+    printf("------------------------ EDIT BIODATA ------------------------\n");
     printf("Masukkan nama mahasiswa : "); scanf(" %[^\n]", name);
     for(int i=0; i<total; i++){
         if(strcmp(name, student[i].nama)==0){
